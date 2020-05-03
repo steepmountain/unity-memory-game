@@ -2,17 +2,16 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CardBehaviour : MonoBehaviour
 {
     public int Value;
+    public GameObject CardText;
 
-    void Start()
+    public void Create(int value)
     {
-    }
-
-    void OnMouseDown()
-    {
-        //transform.rotation *= Quaternion.Euler(0, 180f, 0);
+        Value = value;
+        CardText.GetComponent<TextMeshPro>().text = value.ToString();
     }
 }
